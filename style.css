@@ -1,0 +1,429 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* home */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 4%;
+    padding-right: 4%;
+    overflow: hidden;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo {
+    width: 60px;
+    margin: 30px 0;
+    cursor: pointer;
+}
+
+.navbar .menu-icon {
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    color: black;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+nav ul li a:hover {
+    color: rgb(192, 191, 191);
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 70px 0;
+}
+
+.row .col-1 {
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 50px;
+}
+
+.row .col-1 h2 {
+    font-size: 54px;
+    color: black;
+    font-weight: 100;
+}
+
+.row .col-1 h3 {
+    font-size: 30px;
+    color: grey;
+    font-weight: 100;
+    margin: 15px 0;
+}
+
+.row .col-1 p {
+    font-size: 18px;
+    color: gray;
+    font-weight: 100;
+}
+
+.row .col-1 button {
+    width: 140px;
+    border: none;
+    outline: none;
+    padding: 12px 10px;
+    margin-top: 10px;
+    color: white;
+    font-size: 16px;
+    background-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: width 0.3s;
+}
+
+.row .col-1 button img {
+    width: 30px;
+    display: none;
+}
+
+.row .col-1 button:hover img {
+    display: block;
+}
+
+.row .col-1 button:hover {
+    width: 160px;
+    background-color: #424242;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.row .col-1::after {
+    content: '';
+    width: 7px;
+    height: 120px;
+    background-color: #424242;
+    position: absolute;
+    left: -40px;
+    top: 8px;
+}
+
+.row .col-2 {
+    position: relative;
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.row .col-2 .home-ps {
+    width: 100%;
+}
+
+@media only screen and (max-width:800px) {
+
+    nav ul {
+        width: 100%;
+        position: absolute;
+        background-color: #424242;
+        top: 85px;
+        right: 0;
+        z-index: 2;
+    }
+
+    nav ul li {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0px;
+    }
+
+    nav ul li a {
+        color: white;
+    }
+
+    .navbar .menu-icon {
+        display: block;
+    }
+
+    #menuList {
+        overflow: hidden;
+        transition: 0.7s;
+    }
+
+    .row {
+        display: inline-block;
+    }
+
+    .row .col-2 {
+        margin-top: 120px;
+    }
+
+}
+
+@media only screen and (max-width:290px) {
+
+    .row .col-1 {
+        margin-left: 40px;
+    }
+
+    .row .col-1 h2 {
+        font-size: 40px;
+        color: black;
+        font-weight: 100;
+    }
+
+}
+
+/* home */
+
+/* games */
+
+#games {
+    height: 100%;
+    width: 100%;
+    background-color: #1c1919;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, auto));
+    grid-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-card {
+    color: whitesmoke;
+    background-color: #323232;
+    width: 320px;
+    border-radius: 10px;
+    margin: 30px 0px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.game-card:hover {
+    transform: translatey(-5px);
+}
+
+.text-card {
+    padding: 10px;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+}
+
+.text-card h2 {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+    color: whitesmoke;
+    line-height: 30px;
+    margin-bottom: 5px;
+}
+
+.image-card {
+    width: 100%;
+    cursor: pointer;
+}
+
+.image-card img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.text-card .span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.text-card .price {
+    color: white;
+    font-size: 22px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0px 10px;
+}
+
+.text-card .sall {
+    text-decoration: line-through solid #a5a4a4;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #a5a4a4;
+}
+
+.text-card button {
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: #323232;
+    padding: 12px 0px;
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.text-card button:hover {
+    transform: translatey(5px);
+    color: white;
+    border: 2px solid white;
+    background-color: #424242;
+}
+
+/* games */
+
+/* shop */
+
+.shop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, auto));
+    gap: 44px;
+    margin: 30px 0px;
+    margin-bottom: 50px;
+}
+
+.shop-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 2em 1.5em;
+    border-radius: .5em;
+    box-shadow: 1px 1px 20px #424242;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.shop-card:hover {
+    transform: translatey(5px);
+}
+
+.shop-card img {
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+.shop-card h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.shop-card .much {
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 10px 0px 5px;
+}
+
+.shop-card button {
+    border: none;
+    background-color: transparent;
+    margin-top: 10px;
+    color: #1c1919;
+    font-size: 19px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.shop-card button:hover {
+    color: whitesmoke;
+    background-color: #1c1919;
+    padding: 10px 40px;
+    border-radius: 5px;
+    transform: translatey(5px);
+}
+
+/* shop */
+
+/* social-media */
+
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #1c1919;
+    padding: 30px 0px;
+}
+
+.social-media h2 {
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+.social-media img {
+    width: 50px;
+    padding: 15px 12px 0px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.social-media img:hover {
+    transform: translatey(6px);
+}
+
+/* social-media */
+
+/* footer */
+
+footer {
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    color: #323232;
+    padding: 12px 0px;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 500;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* footer */
